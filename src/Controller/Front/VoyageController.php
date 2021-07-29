@@ -44,15 +44,15 @@ class VoyageController extends AbstractController
         } 
         $voyages = $voyageRepository->findAll(); // $voyages = $voyageRepository->findBy(['status' => 'avaible']); // KHALED
         $pagination = $paginator->paginate(
-        $voyages, /* query NOT result */
-        $request->query->getInt('page', 1)/*page number*/,
-        3/*limit per page*/
-   );
+            $voyages, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            3/*limit per page*/
+        );
 
         $pagination = $paginator->paginate(
-        $voyages, /* query NOT result */
-        $request->query->getInt('page', 1)/*page number*/,
-        4/*limit per page*/
+            $voyages, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            4/*limit per page*/
         );
 
         return $this->render('Front/voyage/index.html.twig',[

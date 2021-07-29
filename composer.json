@@ -97,9 +97,8 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
-      
-        "database-setup": [
-            "php bin/console doctrine:fixtures:load --no-interaction"
+        "compile":[
+            "php bin/console doctrine:fixtures:load"
         ]
     },
     "conflict": {

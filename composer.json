@@ -13,6 +13,7 @@
         "composer/package-versions-deprecated": "^1.11",
         "doctrine/annotations": "^1.0",
         "doctrine/doctrine-bundle": "^2.1",
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
         "doctrine/doctrine-migrations-bundle": "^3.0",
         "doctrine/orm": "^2.7",
         "fakerphp/faker": "^1.15",
@@ -43,13 +44,12 @@
         "symfony/twig-bundle": "^5.1",
         "symfony/validator": "5.1.*",
         "symfony/web-link": "5.1.*",
+        "symfony/web-profiler-bundle": "5.1.*",
         "symfony/webpack-encore-bundle": "^1.8",
         "symfony/yaml": "5.1.*",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^2.12|^3.0",
-        "vich/uploader-bundle": "^1.16",
-        "doctrine/doctrine-fixtures-bundle": "^3.4"
-
+        "vich/uploader-bundle": "^1.16"
     },
     "require-dev": {
         "symfony/browser-kit": "^5.1",
@@ -58,8 +58,7 @@
         "symfony/maker-bundle": "^1.0",
         "symfony/phpunit-bridge": "^5.1",
         "symfony/stopwatch": "^5.1",
-        "symfony/var-dumper": "^5.1",
-        "symfony/web-profiler-bundle": "^5.1"
+        "symfony/var-dumper": "^5.1"
     },
     "config": {
         "optimize-autoloader": true,
@@ -94,7 +93,7 @@
         },
         "database-setup": [
             "php bin/console doctrine:fixtures:load  --no-interaction"
-          ],
+        ],
         "post-install-cmd": [
             "@auto-scripts",
             "@database-setup"
